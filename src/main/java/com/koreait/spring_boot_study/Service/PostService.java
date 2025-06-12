@@ -5,13 +5,13 @@ import org.springframework.stereotype.Service;
 
 @Service
 public class PostService {
-    private final PostRepositary postRepositary;
+    private final PostRepositary postRepository;
 
-    public PostService(PostRepositary postRepositary){
-        this.postRepositary = postRepositary;
+    public PostService(PostRepositary postRepository) {
+        this.postRepository = postRepository;
     }
     public String getPost() {
-        String  result = postRepositary.getPost();
-        return "어떤 게시물의 우저 정보";
+        String result = postRepository.getPost();
+        return result;
     }
 }
